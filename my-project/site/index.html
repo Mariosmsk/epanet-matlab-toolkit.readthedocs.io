@@ -1,0 +1,2148 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  <link rel="shortcut icon" href="./img/favicon.ico">
+  <title>Home - EPANET-MATLAB-Toolkit</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="./css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Home";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = "/";
+  </script>
+  
+  <script src="./js/jquery-2.1.1.min.js"></script>
+  <script src="./js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="./js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> EPANET-MATLAB-Toolkit</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href=".">Home</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#epanet-matlab-toolkit">EPANET-MATLAB-Toolkit</a></li>
+    
+
+    <li class="toctree-l2"><a href="#requirements">Requirements</a></li>
+    
+
+    <li class="toctree-l2"><a href="#how-to-use-the-toolkit">How to use the Toolkit</a></li>
+    
+
+    <li class="toctree-l2"><a href="#how-to-fixreport-bugs">How to fix/report bugs</a></li>
+    
+
+    <li class="toctree-l2"><a href="#licenses">Licenses</a></li>
+    
+
+    <li class="toctree-l2"><a href="#contributors">Contributors</a></li>
+    
+
+    <li class="toctree-l2"><a href="#list-of-matlab-class-functions">List of Matlab Class Functions</a></li>
+    
+
+    <li class="toctree-l2"><a href="#list-of-epanet-21-functions-supported">List of EPANET 2.1 Functions Supported</a></li>
+    
+
+    <li class="toctree-l2"><a href="#list-of-other-new-epanet-functions-supported">List of other new EPANET Functions Supported</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="about/">About</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">EPANET-MATLAB-Toolkit</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="epanet-matlab-toolkit">EPANET-MATLAB-Toolkit</h1>
+<p>The <code>EPANET-Matlab Toolkit</code> is an open-source software, originally developed by the <a href="http://www.kios.ucy.ac.cy/">KIOS Research Center for Intelligent Systems and Networks of the University of Cyprus</a> which operates within the Matlab environment, for providing a programming interface for the latest version of <a href="https://github.com/OpenWaterAnalytics/epanet">EPANET</a>, a hydraulic and quality modeling software created by the US EPA, with Matlab, a  high-level technical computing software. The goal of the EPANET Matlab Toolkit is to serve as a common programming framework for research and development in the growing field of smart water networks.</p>
+<p>The <code>EPANET-Matlab Toolkit</code> features easy to use commands/wrappers for viewing, modifying, simulating and plotting results produced by the EPANET libraries.  </p>
+<p>For support, please use the OWA community forum : <a href="http://community.wateranalytics.org/">http://community.wateranalytics.org/</a></p>
+<h1 id="requirements">Requirements</h1>
+<ul>
+<li><a href="http://www.mathworks.com/">Matlab</a></li>
+<li><a href="https://github.com/OpenWaterAnalytics/epanet">EPANET 2.1</a> </li>
+</ul>
+<h1 id="how-to-use-the-toolkit">How to use the Toolkit</h1>
+<p>Download the folder <code>Download ZIP</code>, set the run path in Matlab within the saved folder, and run <code>RunTests.m</code>. This will execute all the commands which have been implemented in the Class.</p>
+<p>Example:</p>
+<p>d=epanet('Net1.inp')</p>
+<p>d.getNodeCount</p>
+<p>d.getNodeElevations</p>
+<h1 id="how-to-fixreport-bugs">How to fix/report bugs</h1>
+<p>To fix a bug <code>Fork</code> the <code>EPANET-Matlab Toolkit</code>, <code>Edit</code> the code and make the appropriate change, and then <code>Pull</code> it so that we evaluate it. </p>
+<p>Keep in mind that some bugs may exist in the <code>EPANET</code> libraries, in case you are not receiving the expected results.</p>
+<h1 id="licenses">Licenses</h1>
+<ul>
+<li><code>EPANET</code>: Public Domain</li>
+<li><code>EPANET-MSX</code>: GNU Lesser General Public License</li>
+<li><code>EPANET-Matlab Toolkit</code>: EUPL </li>
+</ul>
+<h1 id="contributors">Contributors</h1>
+<ul>
+<li>Marios Kyriakou, <a href="http://www.kios.ucy.ac.cy/">KIOS Research Center for Intelligent Systems and Networks, University of Cyprus</a></li>
+<li>Demetrios Eliades, <a href="http://www.kios.ucy.ac.cy/c">KIOS Research Center for Intelligent Systems and Networks, University of Cyprus</a></li>
+</ul>
+<p>The <code>EPANET-Matlab Toolkit</code> is based/inspired on the <a href="http://www.mathworks.com/matlabcentral/fileexchange/25100-epanet-matlab-toolkit">EPANET-Matlab Toolkit</a> as well as the OpenWaterAnalytics <a href="https://github.com/OpenWaterAnalytics/epanet-matlab">EPANET-Matlab Wrappers</a></p>
+<h1 id="list-of-matlab-class-functions">List of Matlab Class Functions</h1>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>epanet</td>
+<td>Load Input file and open the EPANET Toolkit system</td>
+</tr>
+<tr>
+<td>unload</td>
+<td>Unload library and close the EPANET Toolkit system</td>
+</tr>
+<tr>
+<td>loadEPANETFile</td>
+<td>Open the EPANET Toolkit system</td>
+</tr>
+<tr>
+<td>getError</td>
+<td>Returns the description of an error code</td>
+</tr>
+<tr>
+<td>getComputedHydraulicTimeSeries</td>
+<td>Computed Hydraulic Time Series</td>
+</tr>
+<tr>
+<td>getComputedQualityTimeSeries</td>
+<td>Computed Quality Time Series</td>
+</tr>
+<tr>
+<td>getComputedTimeSeries</td>
+<td>Computed Hydraulic &amp; Quality Time Series via ENepanet binary file</td>
+</tr>
+<tr>
+<td>getConnectivityMatrix</td>
+<td>Return connectivity matrix of the network</td>
+</tr>
+<tr>
+<td>getControlRulesCount</td>
+<td>Retrieves the number of control rules</td>
+</tr>
+<tr>
+<td>getControls</td>
+<td>Retrieves the controls</td>
+</tr>
+<tr>
+<td>getCurveCount</td>
+<td>Retrieves the number of curves</td>
+</tr>
+<tr>
+<td>getCurveIndex</td>
+<td>Retrieves index of curve with specific ID</td>
+</tr>
+<tr>
+<td>getCurveLengths</td>
+<td>Retrieves number of points in a curve</td>
+</tr>
+<tr>
+<td>getCurveNameID</td>
+<td>Retrieves curve id</td>
+</tr>
+<tr>
+<td>getCurveValue</td>
+<td>Retrieves (x,y) values of specific curve index</td>
+</tr>
+<tr>
+<td>getCurveXY</td>
+<td>Retrieves (x,y) values of all curves</td>
+</tr>
+<tr>
+<td>getENfunctionsImpemented</td>
+<td>Retrieves the epanet functions that have been developed</td>
+</tr>
+<tr>
+<td>getFlowUnits</td>
+<td>Retrieves the units used to express all flow rates</td>
+</tr>
+<tr>
+<td>getLibFunctions</td>
+<td>Retrieves the functions of DLL</td>
+</tr>
+<tr>
+<td>getLinkBulkReactionCoeff</td>
+<td>Retrieves the value of all link bulk reaction coefficients</td>
+</tr>
+<tr>
+<td>getLinkCount</td>
+<td>Retrieves the number of links</td>
+</tr>
+<tr>
+<td>getLinkDiameter</td>
+<td>Retrieves the value of all link diameters</td>
+</tr>
+<tr>
+<td>getLinkEnergy</td>
+<td>Retrieves the value of all computed energy in kwatts</td>
+</tr>
+<tr>
+<td>getLinkEfficiency</td>
+<td>Retrieves the value of all computed efficiency</td>
+</tr>
+<tr>
+<td>getLinkFlows</td>
+<td>Retrieves the value of all computed link flow rates</td>
+</tr>
+<tr>
+<td>getLinkHeadloss</td>
+<td>Retrieves the value of all computed link headloss</td>
+</tr>
+<tr>
+<td>getLinkIndex</td>
+<td>Retrieves the indices of all links, or the indices of an ID set of links</td>
+</tr>
+<tr>
+<td>getLinkInitialSetting</td>
+<td>Retrieves the value of all link roughness for pipes or initial speed for pumps or initial setting for valves</td>
+</tr>
+<tr>
+<td>getLinkInitialStatus</td>
+<td>Retrieves the value of all link initial status</td>
+</tr>
+<tr>
+<td>getLinkLength</td>
+<td>Retrieves the value of all link lengths</td>
+</tr>
+<tr>
+<td>getLinkMinorLossCoeff</td>
+<td>Retrieves the value of all link minor loss coefficients</td>
+</tr>
+<tr>
+<td>getLinkNameID</td>
+<td>Retrieves the ID label(s) of all links, or the IDs of an index set of links</td>
+</tr>
+<tr>
+<td>getLinkNodesIndex</td>
+<td>Retrieves the indexes of the from/to nodes of all links</td>
+</tr>
+<tr>
+<td>getLinkPipeCount</td>
+<td>Retrieves the number of pipes</td>
+</tr>
+<tr>
+<td>getLinkPipeIndex</td>
+<td>Retrieves the indices of pipes</td>
+</tr>
+<tr>
+<td>getLinkPipeNameID</td>
+<td>Retrieves the pipe IDs</td>
+</tr>
+<tr>
+<td>getLinkPumpCount</td>
+<td>Retrieves the number of pumps</td>
+</tr>
+<tr>
+<td>getLinkPumpHeadCurveIndex</td>
+<td>Retrieves index of a head curve for specific link index</td>
+</tr>
+<tr>
+<td>getLinkPumpIndex</td>
+<td>Retrieves the indices of pumps</td>
+</tr>
+<tr>
+<td>getLinkPumpNameID</td>
+<td>Retrieves the pump IDs</td>
+</tr>
+<tr>
+<td>getLinkPumpPatternIndex</td>
+<td>Retrieves the pump pattern indices</td>
+</tr>
+<tr>
+<td>getLinkPumpPatternNameID</td>
+<td>Retrieves the pump pattern IDs</td>
+</tr>
+<tr>
+<td>getLinkPumpType</td>
+<td>Retrieves the type of a pump for specific link index</td>
+</tr>
+<tr>
+<td>getLinkPumpTypeCode</td>
+<td>Retrieves the type code of a pump for specific link index</td>
+</tr>
+<tr>
+<td>getLinkPumpSwitches</td>
+<td>Calculates the number of pump switches</td>
+</tr>
+<tr>
+<td>getLinkQuality</td>
+<td>Retrieves the quality of links</td>
+</tr>
+<tr>
+<td>getLinkRoughnessCoeff</td>
+<td>Retrieves the value of all link roughness</td>
+</tr>
+<tr>
+<td>getLinkSettings</td>
+<td>Retrieves the value of all computed link roughness for pipes or actual speed for pumps or actual setting for valves</td>
+</tr>
+<tr>
+<td>getLinkStatus</td>
+<td>Retrieves the value of all computed link status (0 = closed, 1 = open)</td>
+</tr>
+<tr>
+<td>getLinkType</td>
+<td>Retrieves the link-type for all links</td>
+</tr>
+<tr>
+<td>getLinkTypeIndex</td>
+<td>Retrieves the link-type code for all links.</td>
+</tr>
+<tr>
+<td>getLinkValveCount</td>
+<td>Retrieves the number of valves</td>
+</tr>
+<tr>
+<td>getLinkValveIndex</td>
+<td>Retrieves the indices of valves</td>
+</tr>
+<tr>
+<td>getLinkValveNameID</td>
+<td>Retrieves the valve IDs</td>
+</tr>
+<tr>
+<td>getLinkVelocity</td>
+<td>Retrieves the value of all computed link velocities</td>
+</tr>
+<tr>
+<td>getLinkWallReactionCoeff</td>
+<td>Retrieves the value of all link wall reaction coefficients</td>
+</tr>
+<tr>
+<td>getNodeActualDemand</td>
+<td>Retrieves the computed value of all actual demands</td>
+</tr>
+<tr>
+<td>getNodeActualDemandSensingNodes</td>
+<td>Retrieves the computed demand values at some sensing nodes</td>
+</tr>
+<tr>
+<td>getNodeActualQuality</td>
+<td>Retrieves the computed values of the actual quality for all nodes</td>
+</tr>
+<tr>
+<td>getNodeActualQualitySensingNodes</td>
+<td>Retrieves the computed quality values at some sensing nodes</td>
+</tr>
+<tr>
+<td>getNodeBaseDemands</td>
+<td>Retrieves the value of all node base demands</td>
+</tr>
+<tr>
+<td>getNodeCoordinates</td>
+<td>Retrieves coordinate x, y, and x, y vertices for a node</td>
+</tr>
+<tr>
+<td>getNodeCount</td>
+<td>Retrieves the number of nodes</td>
+</tr>
+<tr>
+<td>getNodePatternIndex</td>
+<td>Retrieves the value of all node pattern indices</td>
+</tr>
+<tr>
+<td>getNodeDemandPatternIndex</td>
+<td>Retrieves the value of all node demand pattern indices</td>
+</tr>
+<tr>
+<td>getNodeDemandPatternNameID</td>
+<td>Retrieves the value of all node demand pattern IDs</td>
+</tr>
+<tr>
+<td>getNodeElevations</td>
+<td>Retrieves the value of all node elevations</td>
+</tr>
+<tr>
+<td>getNodeEmitterCoeff</td>
+<td>Retrieves the value of all node emmitter coefficients</td>
+</tr>
+<tr>
+<td>getNodeHydaulicHead</td>
+<td>Retrieves the computed values of all hydraulic heads</td>
+</tr>
+<tr>
+<td>getNodeIndex</td>
+<td>Retrieves the indices of all nodes or some nodes with a specified ID</td>
+</tr>
+<tr>
+<td>getNodeInitialQuality</td>
+<td>Retrieves the value of all node initial quality</td>
+</tr>
+<tr>
+<td>getNodeJunctionCount</td>
+<td>Retrieves the number of junctions</td>
+</tr>
+<tr>
+<td>getNodeJunctionIndex</td>
+<td>Retrieves the junctions indices</td>
+</tr>
+<tr>
+<td>getNodeJunctionNameID</td>
+<td>Retrieves the junctions IDs</td>
+</tr>
+<tr>
+<td>getNodeMassFlowRate</td>
+<td>Retrieves the computed mass flow rates per minute of chemical sources</td>
+</tr>
+<tr>
+<td>getNodeNameID</td>
+<td>Retrieves the ID label of all nodes or some nodes with a specified index</td>
+</tr>
+<tr>
+<td>getNodeDemandCategoriesNumber</td>
+<td>Retrieves the number of demand categories for a node</td>
+</tr>
+<tr>
+<td>getNodePressure</td>
+<td>Retrieves the computed values of all node pressures</td>
+</tr>
+<tr>
+<td>getNodeReservoirCount</td>
+<td>Retrieves the number of reservoirs</td>
+</tr>
+<tr>
+<td>getNodeReservoirIndex</td>
+<td>Retrieves the indices of reservoirs</td>
+</tr>
+<tr>
+<td>getNodeReservoirNameID</td>
+<td>Retrieves the reservoirs IDs</td>
+</tr>
+<tr>
+<td>getNodeSourcePatternIndex</td>
+<td>Retrieves the value of all node source pattern index</td>
+</tr>
+<tr>
+<td>getNodeSourceQuality</td>
+<td>Retrieves the value of all nodes source quality</td>
+</tr>
+<tr>
+<td>getNodeSourceType</td>
+<td>Retrieves the value of all node source type</td>
+</tr>
+<tr>
+<td>getNodeTankBulkReactionCoeff</td>
+<td>Retrieves the tank bulk rate coefficient</td>
+</tr>
+<tr>
+<td>getNodeTankCount</td>
+<td>Retrieves the number of tanks</td>
+</tr>
+<tr>
+<td>getNodeTankDiameter</td>
+<td>Retrieves the tank diameters</td>
+</tr>
+<tr>
+<td>getNodeTankIndex</td>
+<td>Retrieves the indices of tanks</td>
+</tr>
+<tr>
+<td>getNodeTankInitialLevel</td>
+<td>Retrieves the value of all tank initial water levels</td>
+</tr>
+<tr>
+<td>getNodeTankInitialWaterVolume</td>
+<td>Retrieves the tank initial volume</td>
+</tr>
+<tr>
+<td>getNodeTankMaximumWaterVolume</td>
+<td>Retrieves maximum water volume</td>
+</tr>
+<tr>
+<td>getNodeTankMaximumWaterLevel</td>
+<td>Retrieves the tank maximum water level</td>
+</tr>
+<tr>
+<td>getNodeTankMinimumFraction</td>
+<td>Retrieves the tank Fraction of total volume occupied by the inlet/outlet zone in a 2-compartment tank</td>
+</tr>
+<tr>
+<td>getNodeTankMinimumWaterLevel</td>
+<td>Retrieves the tank minimum water level</td>
+</tr>
+<tr>
+<td>getNodeTankMinimumWaterVolume</td>
+<td>Retrieves the tank minimum volume</td>
+</tr>
+<tr>
+<td>getNodeTankMixZoneVolume</td>
+<td>Retrieves the tank mixing zone volume</td>
+</tr>
+<tr>
+<td>getNodeTankMixingModelCode</td>
+<td>Retrieves the tank mixing model code</td>
+</tr>
+<tr>
+<td>getNodeTankMixingModelType</td>
+<td>Retrieves the tank mixing model type (mix1, mix2, fifo, lifo)</td>
+</tr>
+<tr>
+<td>getNodeTankMixiningModel</td>
+<td>Retrieves the tank mixing model</td>
+</tr>
+<tr>
+<td>getNodeTankNameID</td>
+<td>Retrieves the tanks IDs</td>
+</tr>
+<tr>
+<td>getNodeTankReservoirCount</td>
+<td>Retrieves the number of tanks</td>
+</tr>
+<tr>
+<td>getNodeTankVolume</td>
+<td>Retrieves the tank volume</td>
+</tr>
+<tr>
+<td>getNodeTankVolumeCurveIndex</td>
+<td>Retrieves the tank volume curve index</td>
+</tr>
+<tr>
+<td>getNodeType</td>
+<td>Retrieves the node-type for all nodes</td>
+</tr>
+<tr>
+<td>getNodeTypeIndex</td>
+<td>Retrieves the node code-index for all nodes</td>
+</tr>
+<tr>
+<td>getNodesConnectingLinksID</td>
+<td>Retrieves the id of the from/to nodes of all links</td>
+</tr>
+<tr>
+<td>getOptionsAccuracyValue</td>
+<td>Retrieve the analysis convergence criterion (0.001)</td>
+</tr>
+<tr>
+<td>getOptionsEmitterExponent</td>
+<td>Retrieve power exponent for the emmitters (0.5)</td>
+</tr>
+<tr>
+<td>getOptionsMaxTrials</td>
+<td>Retrieve maximum number of analysis trials</td>
+</tr>
+<tr>
+<td>getOptionsPatternDemandMultiplier</td>
+<td>Retrieve the demand multiplier (x1)</td>
+</tr>
+<tr>
+<td>getOptionsQualityTolerance</td>
+<td>Retrieve the water quality analysis tolerance</td>
+</tr>
+<tr>
+<td>getPattern</td>
+<td>Retrieves the multiplier factor for all patterns and all times</td>
+</tr>
+<tr>
+<td>getPatternAveragePatternValue</td>
+<td>Retrieves the average value of a pattern</td>
+</tr>
+<tr>
+<td>getPatternCount</td>
+<td>Retrieves the number of patterns</td>
+</tr>
+<tr>
+<td>getPatternIndex</td>
+<td>Retrieves the index of all or some time patterns IDs</td>
+</tr>
+<tr>
+<td>getPatternLengths</td>
+<td>Retrieves the number of time periods in all or some patterns</td>
+</tr>
+<tr>
+<td>getPatternNameID</td>
+<td>Retrieves the patterns IDs</td>
+</tr>
+<tr>
+<td>getPatternValue</td>
+<td>Retrieves the multiplier factor for a certain pattern and time</td>
+</tr>
+<tr>
+<td>getQualityCode</td>
+<td>Retrieves the code of water quality analysis type</td>
+</tr>
+<tr>
+<td>getQualityInfo</td>
+<td>Retrieves the quality info - bug in ENgetqualinfo</td>
+</tr>
+<tr>
+<td>getQualityTraceNodeIndex</td>
+<td>Retrieves the trace node index of water quality analysis type</td>
+</tr>
+<tr>
+<td>getQualityType</td>
+<td>Retrieves the type of water quality analysis type</td>
+</tr>
+<tr>
+<td>getStatistic</td>
+<td>Retrieves hydraulic simulation statistic</td>
+</tr>
+<tr>
+<td>getTimeHTime</td>
+<td>Retrieves the number of htime</td>
+</tr>
+<tr>
+<td>getTimeQTime</td>
+<td>Retrieves the number of qtime</td>
+</tr>
+<tr>
+<td>getTimeHaltFlag</td>
+<td>Retrieves the number of  halt flag</td>
+</tr>
+<tr>
+<td>getTimeHydraulicStep</td>
+<td>Retrieves the value of the hydraulic time step</td>
+</tr>
+<tr>
+<td>getTimeNextEvent</td>
+<td>Retrieves the number of next event</td>
+</tr>
+<tr>
+<td>getTimePatternStart</td>
+<td>Retrieves the value of pattern start time</td>
+</tr>
+<tr>
+<td>getTimePatternStep</td>
+<td>Retrieves the value of the pattern time step</td>
+</tr>
+<tr>
+<td>getTimeQualityStep</td>
+<td>Retrieves the value of the water quality time step</td>
+</tr>
+<tr>
+<td>getTimeReportingPeriods</td>
+<td>Retrieves the number of reporting periods saved to the binary</td>
+</tr>
+<tr>
+<td>getTimeReportingStart</td>
+<td>Retrie ves the value of the reporting start time</td>
+</tr>
+<tr>
+<td>getTimeReportingStep</td>
+<td>Retrieves the value of the reporting time step</td>
+</tr>
+<tr>
+<td>getTimeRuleControlStep</td>
+<td>Retrieves the time step for evaluating rule-based controls</td>
+</tr>
+<tr>
+<td>getTimeSimulationDuration</td>
+<td>Retrieves the value of simulation duration</td>
+</tr>
+<tr>
+<td>getTimeStartTime</td>
+<td>Retrieves the number of start time</td>
+</tr>
+<tr>
+<td>getTimeStatisticsType</td>
+<td>Retrieves the type of time series post-processing ('NONE','AVERAGE','MINIMUM','MAXIMUM', 'RANGE')</td>
+</tr>
+<tr>
+<td>getTimeStatisticsIndex</td>
+<td>Retrieves the type of time series post-processing</td>
+</tr>
+<tr>
+<td>getVersion</td>
+<td>Retrieve the current EPANET version of DLL</td>
+</tr>
+<tr>
+<td>getNodesInfo</td>
+<td>Retrieves nodes info e.g. elevations, demand pattern indices, emitter coeff. , initial quality, source quality, source pattern indices, source type code, type indices</td>
+</tr>
+<tr>
+<td>getLinksInfo</td>
+<td>Retrieves links info e.g. diameters, lengths, roughness coeff. , minor loss coeff. , initial status, initial settings, bulk reaction coeff. , wall reaction coeff. , nodes connecting link indices, type indices</td>
+</tr>
+<tr>
+<td>addCurve</td>
+<td>Adds a new curve appended to the end of the existing curves</td>
+</tr>
+<tr>
+<td>addPattern</td>
+<td>Adds a new time pattern to the network</td>
+</tr>
+<tr>
+<td>addNodeJunction</td>
+<td>Adds a new junction</td>
+</tr>
+<tr>
+<td>addNodeReservoir</td>
+<td>Adds a new reservoir</td>
+</tr>
+<tr>
+<td>addNodeTank</td>
+<td>Adds a new tank</td>
+</tr>
+<tr>
+<td>addLinkPipeCV</td>
+<td>Adds a new CV pipe</td>
+</tr>
+<tr>
+<td>addLinkPipe</td>
+<td>Adds a new pipe</td>
+</tr>
+<tr>
+<td>addLinkPump</td>
+<td>Adds a new pump</td>
+</tr>
+<tr>
+<td>addLinkValvePRV</td>
+<td>Adds a new PRV valve</td>
+</tr>
+<tr>
+<td>addLinkValvePSV</td>
+<td>Adds a new PSV valve</td>
+</tr>
+<tr>
+<td>addLinkValvePBV</td>
+<td>Adds a new PBV valve</td>
+</tr>
+<tr>
+<td>addLinkValveFCV</td>
+<td>Adds a new FCV valve</td>
+</tr>
+<tr>
+<td>addLinkValveTCV</td>
+<td>Adds a new TCV valve</td>
+</tr>
+<tr>
+<td>addLinkValveGPV</td>
+<td>Adds a new GPV valve</td>
+</tr>
+<tr>
+<td>deleteNode</td>
+<td>Deletes a node</td>
+</tr>
+<tr>
+<td>deleteLink</td>
+<td>Deletes a link</td>
+</tr>
+<tr>
+<td>closeHydraulicAnalysis</td>
+<td>Closes the hydraulic analysis system, freeing all allocated memory</td>
+</tr>
+<tr>
+<td>closeNetwork</td>
+<td>Closes down the Toolkit system</td>
+</tr>
+<tr>
+<td>closeQualityAnalysis</td>
+<td>Closes the water quality analysis system, freeing all allocated memory</td>
+</tr>
+<tr>
+<td>initializeHydraulicAnalysis</td>
+<td>Initializes storage tank levels, link status and settings, and the simulation clock time prior to running a hydraulic analysis</td>
+</tr>
+<tr>
+<td>initializeQualityAnalysis</td>
+<td>Initializes water quality and the simulation clock time prior to running a water quality analysis</td>
+</tr>
+<tr>
+<td>nextHydraulicAnalysisStep</td>
+<td>Determines the length of time until the next hydraulic event occurs in an extended period simulation</td>
+</tr>
+<tr>
+<td>nextQualityAnalysisStep</td>
+<td>Advances the water quality simulation to the start of the next hydraulic time period</td>
+</tr>
+<tr>
+<td>openHydraulicAnalysis</td>
+<td>Opens the hydraulics analysis system</td>
+</tr>
+<tr>
+<td>openQualityAnalysis</td>
+<td>Opens the water quality analysis system</td>
+</tr>
+<tr>
+<td>runHydraulicAnalysis</td>
+<td>Runs a single period hydraulic analysis, retrieving the current simulation clock time t</td>
+</tr>
+<tr>
+<td>runQualityAnalysis</td>
+<td>Makes available the hydraulic and water quality results that occur at the start of the next time period of a water quality analysis, where the start of the period is returned in t</td>
+</tr>
+<tr>
+<td>saveHydraulicFile</td>
+<td>Saves the current contents of the binary hydraulics file to a file</td>
+</tr>
+<tr>
+<td>saveHydraulicsOutputReportingFile</td>
+<td>Transfers results of a hydraulic simulation from the binary Hydraulics file to the binary Output file, where results are only reported at uniform reporting intervals</td>
+</tr>
+<tr>
+<td>saveInputFile</td>
+<td>Writes all current network input data to a file using the format of an EPANET input file</td>
+</tr>
+<tr>
+<td>plot</td>
+<td>Plot the network input file</td>
+</tr>
+<tr>
+<td>setControl</td>
+<td>Sets the parameters of a simple control statement</td>
+</tr>
+<tr>
+<td>setCurve</td>
+<td>Sets x,y values for a specific curve</td>
+</tr>
+<tr>
+<td>setCurveValue</td>
+<td>Retrieves x,y point for a specific point number and curve</td>
+</tr>
+<tr>
+<td>setLinkBulkReactionCoeff</td>
+<td>Sets the values of bulk reactions</td>
+</tr>
+<tr>
+<td>setLinkDiameter</td>
+<td>Sets the values of diameters</td>
+</tr>
+<tr>
+<td>setLinkPumpHeadCurveIndex</td>
+<td>Sets the curves index for pumps index</td>
+</tr>
+<tr>
+<td>setLinkInitialSetting</td>
+<td>Sets the values of initial settings</td>
+</tr>
+<tr>
+<td>setLinkInitialStatus</td>
+<td>Sets the values of initial status</td>
+</tr>
+<tr>
+<td>setLinkLength</td>
+<td>Sets the values of lengths</td>
+</tr>
+<tr>
+<td>setLinkMinorLossCoeff</td>
+<td>Sets the values of minor loss coeff.</td>
+</tr>
+<tr>
+<td>setLinkRoughnessCoeff</td>
+<td>Sets the values of roughness coeff.</td>
+</tr>
+<tr>
+<td>setLinkSettings</td>
+<td>Sets the values of settings</td>
+</tr>
+<tr>
+<td>setLinkStatus</td>
+<td>Sets the values of status</td>
+</tr>
+<tr>
+<td>setLinkWallReactionCoeff</td>
+<td>Sets the values of wall reactions</td>
+</tr>
+<tr>
+<td>setNodeBaseDemands</td>
+<td>Sets the values of demands</td>
+</tr>
+<tr>
+<td>setNodeCoordinates</td>
+<td>Sets node coordinates</td>
+</tr>
+<tr>
+<td>setNodeDemandPatternIndex</td>
+<td>Sets the values of demand pattern indices</td>
+</tr>
+<tr>
+<td>setNodeElevations</td>
+<td>Sets the values of elevations</td>
+</tr>
+<tr>
+<td>setNodeEmitterCoeff</td>
+<td>Sets the values of emitter coeff.</td>
+</tr>
+<tr>
+<td>setNodeInitialQuality</td>
+<td>Sets the values of initial qualities</td>
+</tr>
+<tr>
+<td>setNodeSourcePatternIndex</td>
+<td>Sets the values of source pattern indices</td>
+</tr>
+<tr>
+<td>setNodeSourceQuality</td>
+<td>Sets the values of source qualities</td>
+</tr>
+<tr>
+<td>setNodeSourceType</td>
+<td>Sets the values of source types</td>
+</tr>
+<tr>
+<td>setNodeTankBulkReactionCoeff</td>
+<td>Sets the values of tank bulk reaction coeff.</td>
+</tr>
+<tr>
+<td>setNodeTankDiameter</td>
+<td>Sets the values of tanks diameter</td>
+</tr>
+<tr>
+<td>setNodeTankInitialLevel</td>
+<td>Sets the values of tanks initial level</td>
+</tr>
+<tr>
+<td>setNodeTankMaximumWaterLevel</td>
+<td>Sets the values of tanks maximum water level</td>
+</tr>
+<tr>
+<td>setNodeTankMinimumWaterLevel</td>
+<td>Sets the values of tanks minimum water level</td>
+</tr>
+<tr>
+<td>setNodeTankMinimumFraction</td>
+<td>Sets the values of tanks mix fraction</td>
+</tr>
+<tr>
+<td>setNodeTankMinimumWaterVolume</td>
+<td>Sets the values of tanks minimum water volume</td>
+</tr>
+<tr>
+<td>setNodeTankMixingModelType</td>
+<td>Sets the values of tanks model</td>
+</tr>
+<tr>
+<td>setOptionsAccuracyValue</td>
+<td>Sets the value of accurancy</td>
+</tr>
+<tr>
+<td>setOptionsEmitterExponent</td>
+<td>Sets the value of emitter exponent</td>
+</tr>
+<tr>
+<td>setOptionsMaxTrials</td>
+<td>Sets the value of max trials</td>
+</tr>
+<tr>
+<td>setOptionsPatternDemandMultiplier</td>
+<td>Sets the value of pattern demand multiplier</td>
+</tr>
+<tr>
+<td>setOptionsQualityTolerance</td>
+<td>Sets the value of tolerance</td>
+</tr>
+<tr>
+<td>setPattern</td>
+<td>Sets all of the multiplier factors for a specific time pattern</td>
+</tr>
+<tr>
+<td>setPatternMatrix</td>
+<td>Sets all of the multiplier factors for all patterns</td>
+</tr>
+<tr>
+<td>setPatternValue</td>
+<td>Sets the multiplier factor for a specific period within a time pattern</td>
+</tr>
+<tr>
+<td>setQualityType</td>
+<td>Sets the type of water quality analysis called for</td>
+</tr>
+<tr>
+<td>setReport</td>
+<td>Issues a report formatting command. Formatting commands are the same as used in the [REPORT] section of the EPANET Input file</td>
+</tr>
+<tr>
+<td>setReportFormatReset</td>
+<td>Clears any report formatting commands that either appeared in the [REPORT] section of the EPANET Input file or were issued with the ENsetreport function</td>
+</tr>
+<tr>
+<td>setReportStatus</td>
+<td>Sets the level of hydraulic status reporting</td>
+</tr>
+<tr>
+<td>setTimeHTime</td>
+<td>Sets the htime</td>
+</tr>
+<tr>
+<td>setTimeHaltFlag</td>
+<td>Sets the halt flag</td>
+</tr>
+<tr>
+<td>setTimeHydraulicStep</td>
+<td>Sets the hydraulic step</td>
+</tr>
+<tr>
+<td>setTimePatternStart</td>
+<td>Sets the pattern start</td>
+</tr>
+<tr>
+<td>setTimePatternStep</td>
+<td>Sets the pattern step</td>
+</tr>
+<tr>
+<td>setTimeQualityStep</td>
+<td>Sets the quality step</td>
+</tr>
+<tr>
+<td>setTimeReportingStart</td>
+<td>Sets the reporting start</td>
+</tr>
+<tr>
+<td>setTimeReportingStep</td>
+<td>Sets the reporting step</td>
+</tr>
+<tr>
+<td>setTimeRuleControlStep</td>
+<td>Sets the rule control step</td>
+</tr>
+<tr>
+<td>setTimeSimulationDuration</td>
+<td>Sets the simulation duration</td>
+</tr>
+<tr>
+<td>setTimeStatisticsType</td>
+<td>Sets the statistic type</td>
+</tr>
+<tr>
+<td>solveCompleteHydraulics</td>
+<td>Runs a complete hydraulic simulation with results for all time periods written to the binary Hydraulics file</td>
+</tr>
+<tr>
+<td>solveCompleteQuality</td>
+<td>Runs a complete water quality simulation with results at uniform reporting intervals written to EPANET's binary Output file</td>
+</tr>
+<tr>
+<td>stepQualityAnalysisTimeLeft</td>
+<td>Advances the water quality simulation one water quality time step. The time remaining in the overall simulation is returned in tleft</td>
+</tr>
+<tr>
+<td>useHydraulicFile</td>
+<td>Uses the contents of the specified file as the current binary hydraulics file</td>
+</tr>
+<tr>
+<td>writeLineInReportFile</td>
+<td>Writes a line of text to the EPANET report file</td>
+</tr>
+<tr>
+<td>writeReport</td>
+<td>Writes a formatted text report on simulation results to the Report file</td>
+</tr>
+<tr>
+<td><b> MSX Functions </b></td>
+<td></td>
+</tr>
+<tr>
+<td>loadMSXFile</td>
+<td>Opens the EPANET-MSX toolkit system</td>
+</tr>
+<tr>
+<td>addMSXPattern</td>
+<td>Adds a new, empty MSX source time pattern to the project</td>
+</tr>
+<tr>
+<td>initializeMSXQualityAnalysis</td>
+<td>Initializes the MSX system before solving for water quality results in step-wise fashion</td>
+</tr>
+<tr>
+<td>saveMSXFile</td>
+<td>Saves the data associated with the current MSX project into a new MSX input file</td>
+</tr>
+<tr>
+<td>saveMSXQualityFile</td>
+<td>Saves water quality results computed for each node, link and reporting time period to a named binary file</td>
+</tr>
+<tr>
+<td>solveMSXCompleteHydraulics</td>
+<td>Solves for system hydraulics over the entire simulation period saving results to an internal scratch file</td>
+</tr>
+<tr>
+<td>solveMSXCompleteQuality</td>
+<td>Solves for water quality over the entire simulation period and saves the results to an internal scratch file</td>
+</tr>
+<tr>
+<td>stepMSXQualityAnalysisTimeLeft</td>
+<td>Advances the water quality solution through a single water quality time step when performing a step-wise simulation</td>
+</tr>
+<tr>
+<td>writeMSXFile</td>
+<td>Write a new MSX file</td>
+</tr>
+<tr>
+<td>writeMSXReport</td>
+<td>Writes water quality simulations results as instructed by the MSX input file to a text file</td>
+</tr>
+<tr>
+<td>writeMSXReportExe</td>
+<td>Writes water quality simulations results as instructed by the MSX input file to a specific name text file</td>
+</tr>
+<tr>
+<td>useMSXHydraulicFile</td>
+<td>Uses a previously saved EPANET hydraulics file as the source of hydraulic information</td>
+</tr>
+<tr>
+<td>plotMSXConcentrationSpeciesOfLinks</td>
+<td>Plots the concentration species of links</td>
+</tr>
+<tr>
+<td>plotMSXConcentrationSpeciesOfNodes</td>
+<td>Plots the concentration species of nodes</td>
+</tr>
+<tr>
+<td>runMSXexe</td>
+<td>Writes water quality simulations results as instructed by the MSX input file to a text file using the epanetmsx.exe</td>
+</tr>
+<tr>
+<td>unloadMSX</td>
+<td>Closes the EPANET-MSX toolkit system</td>
+</tr>
+<tr>
+<td>getMSXAtol</td>
+<td>Retrieves the absolute concentration tolerance</td>
+</tr>
+<tr>
+<td>getMSXRtol</td>
+<td>Retrieves the relative concentration tolerance</td>
+</tr>
+<tr>
+<td>getMSXComputedQualityLink</td>
+<td>Retrieves the concentration of a chemical species at a specific link of the network at the current simulation time step</td>
+</tr>
+<tr>
+<td>getMSXComputedQualityNode</td>
+<td>Retrieves the concentration of a chemical species at a specific node of the network at the current simulation time step.</td>
+</tr>
+<tr>
+<td>getMSXConstantsCount</td>
+<td>Retrieves the number of constants</td>
+</tr>
+<tr>
+<td>getMSXConstantsIndex</td>
+<td>Retrieves the internal index number of constants (given its ID name)</td>
+</tr>
+<tr>
+<td>getMSXConstantsNameID</td>
+<td>Retrieves the ID name of constants (given its internal index number)</td>
+</tr>
+<tr>
+<td>getMSXConstantsValue</td>
+<td>Retrieves the value of a particular reaction constant</td>
+</tr>
+<tr>
+<td>getMSXError</td>
+<td>Returns the text for an error message given its error code</td>
+</tr>
+<tr>
+<td>getMSXLinkInitqualValue</td>
+<td>Retrieves the initial concentration of chemical species assigned to links of the pipe network</td>
+</tr>
+<tr>
+<td>getMSXNodeInitqualValue</td>
+<td>Retrieves the initial concentration of chemical species assigned to nodes</td>
+</tr>
+<tr>
+<td>getMSXParametersCount</td>
+<td>Retrieves the number of parameters</td>
+</tr>
+<tr>
+<td>getMSXParametersIndex</td>
+<td>Retrieves the indices of parameters</td>
+</tr>
+<tr>
+<td>getMSXParametersNameID</td>
+<td>Retrieves the ID name of parameters</td>
+</tr>
+<tr>
+<td>getMSXParametersPipesValue</td>
+<td>Retrieves the value of reaction parameters for pipes</td>
+</tr>
+<tr>
+<td>getMSXParametersTanksValue</td>
+<td>Retrieves the value of reaction parameters for tanks</td>
+</tr>
+<tr>
+<td>getMSXPattern</td>
+<td>Retrieves the multiplier factor for all patterns and all times</td>
+</tr>
+<tr>
+<td>getMSXPatternValue</td>
+<td>Retrieves the multiplier at a specific time period for a given source time pattern</td>
+</tr>
+<tr>
+<td>getMSXPatternsCount</td>
+<td>Retrieves the number of patterns</td>
+</tr>
+<tr>
+<td>getMSXPatternsIndex</td>
+<td>Retrieves the indices of patterns</td>
+</tr>
+<tr>
+<td>getMSXPatternsLengths</td>
+<td>Retrieves the number of time periods in all or some patterns</td>
+</tr>
+<tr>
+<td>getMSXPatternsNameID</td>
+<td>Retrieves the patterns IDs</td>
+</tr>
+<tr>
+<td>getMSXSourceLevel</td>
+<td>Retrieves the value of all nodes source level</td>
+</tr>
+<tr>
+<td>getMSXSourceNodeNameID</td>
+<td>Retrieves the ID label of all nodes</td>
+</tr>
+<tr>
+<td>getMSXSourcePatternIndex</td>
+<td>Retrieves the value of all node source pattern index</td>
+</tr>
+<tr>
+<td>getMSXSourceType</td>
+<td>Retrieves the value of all node source type</td>
+</tr>
+<tr>
+<td>getMSXSources</td>
+<td>Retrieves the source info</td>
+</tr>
+<tr>
+<td>getMSXSpeciesATOL</td>
+<td>Retrieves the atol</td>
+</tr>
+<tr>
+<td>getMSXSpeciesRTOL</td>
+<td>Retrieves the rtol</td>
+</tr>
+<tr>
+<td>getMSXSpeciesConcentration</td>
+<td>Retrieves the concentration of chemical species for nodes and links</td>
+</tr>
+<tr>
+<td>getMSXSpeciesCount</td>
+<td>Retrieves the number of species</td>
+</tr>
+<tr>
+<td>getMSXSpeciesIndex</td>
+<td>Retrieves the indices of species</td>
+</tr>
+<tr>
+<td>getMSXSpeciesNameID</td>
+<td>Retrieves the species IDs</td>
+</tr>
+<tr>
+<td>getMSXSpeciesType</td>
+<td>Retrieves the type of all species (BULK/WALL)</td>
+</tr>
+<tr>
+<td>getMSXSpeciesUnits</td>
+<td>Retrieves the species mass units</td>
+</tr>
+<tr>
+<td>getMSXTimeStep</td>
+<td>Retrieves the time step</td>
+</tr>
+<tr>
+<td>getMSXRateUnits</td>
+<td>Retrieves the rate/time units (SEC/MIN/HR/DAY)</td>
+</tr>
+<tr>
+<td>getMSXAreaUnits</td>
+<td>Retrieves the area units (FT2/M2/CM2)</td>
+</tr>
+<tr>
+<td>getMSXCompiler</td>
+<td>Retrieves the compiler (NONE/VC/GC)</td>
+</tr>
+<tr>
+<td>getMSXCoupling</td>
+<td>Retrieves the coupling (FULL/NONE)</td>
+</tr>
+<tr>
+<td>getMSXEquationsPipes</td>
+<td>Retrieves the species dynamics in pipes</td>
+</tr>
+<tr>
+<td>getMSXEquationsTanks</td>
+<td>Retrieves the species dynamics in tanks</td>
+</tr>
+<tr>
+<td>getMSXEquationsTerms</td>
+<td>Retrieves the species dynamics in terms</td>
+</tr>
+<tr>
+<td>getMSXSolver</td>
+<td>Retrieves the solver (EUL/RK5/ROS2)</td>
+</tr>
+<tr>
+<td>setMSXAreaUnitsCM2</td>
+<td>Sets area units to CM2</td>
+</tr>
+<tr>
+<td>setMSXAreaUnitsFT2</td>
+<td>Sets area units to FT2</td>
+</tr>
+<tr>
+<td>setMSXAreaUnitsM2</td>
+<td>Sets area units to M2</td>
+</tr>
+<tr>
+<td>setMSXAtol</td>
+<td>Sets the value of Atol</td>
+</tr>
+<tr>
+<td>setMSXRtol</td>
+<td>Sets the value of Rtol</td>
+</tr>
+<tr>
+<td>setMSXCompilerGC</td>
+<td>Sets compilet to GC</td>
+</tr>
+<tr>
+<td>setMSXCompilerNONE</td>
+<td>Sets compiler to None</td>
+</tr>
+<tr>
+<td>setMSXCompilerVC</td>
+<td>Sets compiler to VC</td>
+</tr>
+<tr>
+<td>setMSXConstantsValue</td>
+<td>Assigns a new value to a specific reaction constant</td>
+</tr>
+<tr>
+<td>setMSXCouplingFULL</td>
+<td>Sets coupling option to FULL</td>
+</tr>
+<tr>
+<td>setMSXCouplingNONE</td>
+<td>Sets coupling option to NONE</td>
+</tr>
+<tr>
+<td>setMSXLinkInitqualValue</td>
+<td>Assigns an initial concentration of chemical species to links</td>
+</tr>
+<tr>
+<td>setMSXNodeInitqualValue</td>
+<td>Assigns an initial concentration of chemical species to nodes</td>
+</tr>
+<tr>
+<td>setMSXParametersPipesValue</td>
+<td>Assigns a value to a particular reaction parameter for given pipes</td>
+</tr>
+<tr>
+<td>setMSXParametersTanksValue</td>
+<td>Assigns a value to a particular reaction parameter for given tanks</td>
+</tr>
+<tr>
+<td>setMSXPattern</td>
+<td>Sets all of the multiplier factors for a specific time pattern</td>
+</tr>
+<tr>
+<td>setMSXPatternMatrix</td>
+<td>Sets all of the multiplier factors for all patterns</td>
+</tr>
+<tr>
+<td>setMSXPatternValue</td>
+<td>Assigns a new value to the multiplier for a specific time period in a given MSX source time pattern</td>
+</tr>
+<tr>
+<td>setMSXRateUnitsDAY</td>
+<td>Sets rate units to DAY</td>
+</tr>
+<tr>
+<td>setMSXRateUnitsHR</td>
+<td>Sets rate units to HR</td>
+</tr>
+<tr>
+<td>setMSXRateUnitsMIN</td>
+<td>Sets rate units to MIN</td>
+</tr>
+<tr>
+<td>setMSXRateUnitsSEC</td>
+<td>Sets rate units to SEC</td>
+</tr>
+<tr>
+<td>setMSXSolverEUL</td>
+<td>Sets solver to EUL (standard Euler integrator)</td>
+</tr>
+<tr>
+<td>setMSXSolverRK5</td>
+<td>Sets solver to RK5 (Runge-Kutta 5th order integrator)</td>
+</tr>
+<tr>
+<td>setMSXSolverROS2</td>
+<td>Sets solver to ROS2 (2nd order Rosenbrock integrator)</td>
+</tr>
+<tr>
+<td>setMSXSources</td>
+<td>Sets the attributes of an external source of a particular chemical species to a specific node of the pipe network</td>
+</tr>
+<tr>
+<td>setMSXTimeStep</td>
+<td>Sets time step</td>
+</tr>
+<tr>
+<td><b>Bin Functions</b></td>
+<td></td>
+</tr>
+<tr>
+<td>BinClose</td>
+<td>Close binary files and delete</td>
+</tr>
+<tr>
+<td>BinUpdateClass</td>
+<td>Run all bin functions and update the results</td>
+</tr>
+<tr>
+<td>Binplot</td>
+<td>Plot the network input file</td>
+</tr>
+<tr>
+<td>addBinControl</td>
+<td>Adds a new control to the network</td>
+</tr>
+<tr>
+<td>addBinCurveEfficiency</td>
+<td>Adds a new curve efficiency to the network</td>
+</tr>
+<tr>
+<td>addBinCurveHeadloss</td>
+<td>Adds a new curve headloss to the network</td>
+</tr>
+<tr>
+<td>addBinCurvePump</td>
+<td>Adds a new curve pump to the network</td>
+</tr>
+<tr>
+<td>addBinCurveVolume</td>
+<td>Adds a new curve volume to the network</td>
+</tr>
+<tr>
+<td>addBinJunction</td>
+<td>Adds a new junction to the network</td>
+</tr>
+<tr>
+<td>addBinPattern</td>
+<td>Adds a new time pattern to the network</td>
+</tr>
+<tr>
+<td>addBinPipe</td>
+<td>Adds a new pipe to the network</td>
+</tr>
+<tr>
+<td>addBinPump</td>
+<td>Adds a new pump to the network</td>
+</tr>
+<tr>
+<td>addBinReservoir</td>
+<td>Adds a new reservoir to the network</td>
+</tr>
+<tr>
+<td>addBinTank</td>
+<td>Adds a new tank to the network</td>
+</tr>
+<tr>
+<td>addBinValveFCV</td>
+<td>Adds a new valve FCV to the network</td>
+</tr>
+<tr>
+<td>addBinValveGPV</td>
+<td>Adds a new valve GPV to the network</td>
+</tr>
+<tr>
+<td>addBinValvePBV</td>
+<td>Adds a new valve PBV to the network</td>
+</tr>
+<tr>
+<td>addBinValvePRV</td>
+<td>Adds a new valve PRV to the network</td>
+</tr>
+<tr>
+<td>addBinValvePSV</td>
+<td>Adds a new valve PSV to the network</td>
+</tr>
+<tr>
+<td>addBinValveTCV</td>
+<td>Adds a new valve TCV to the network</td>
+</tr>
+<tr>
+<td>removeBinControlLinkID</td>
+<td>Removes a specific control based on link ID</td>
+</tr>
+<tr>
+<td>removeBinControlNodeID</td>
+<td>Removes a specific control based on node ID</td>
+</tr>
+<tr>
+<td>removeBinCurveID</td>
+<td>Removes a specific curve based on ID</td>
+</tr>
+<tr>
+<td>removeBinLinkID</td>
+<td>Removes a specific link based on ID</td>
+</tr>
+<tr>
+<td>removeBinNodeID</td>
+<td>Removes a specific node based on ID</td>
+</tr>
+<tr>
+<td>removeBinRulesControlLinkID</td>
+<td>Removes a specific rule based on link ID</td>
+</tr>
+<tr>
+<td>removeBinRulesControlNodeID</td>
+<td>Removes a specific rule based on node ID</td>
+</tr>
+<tr>
+<td>saveBinInpFile</td>
+<td>Writes all current network input data to a file using the format of an EPANET input file</td>
+</tr>
+<tr>
+<td>getBinComputedAllParameters</td>
+<td>Computes hydraulic and quality time series</td>
+</tr>
+<tr>
+<td>getBinComputedAverageBulkReactionRate</td>
+<td>Computes the average bulk reaction rate</td>
+</tr>
+<tr>
+<td>getBinComputedAverageCostPerDay</td>
+<td>Computes the average cost per day</td>
+</tr>
+<tr>
+<td>getBinComputedAverageEfficiency</td>
+<td>Computes the average efficiency</td>
+</tr>
+<tr>
+<td>getBinComputedAverageKwatts</td>
+<td>Computes the average Kwatts</td>
+</tr>
+<tr>
+<td>getBinComputedAverageKwattsOrMillionGallons</td>
+<td>Computes the average Kwatts or million gallons</td>
+</tr>
+<tr>
+<td>getBinComputedAverageSourceInflow</td>
+<td>Computes the average source inflow</td>
+</tr>
+<tr>
+<td>getBinComputedAverageTankReactionRate</td>
+<td>Computes the average tank reaction rate</td>
+</tr>
+<tr>
+<td>getBinComputedAverageWallReactionRate</td>
+<td>Computes average wall reaction rate</td>
+</tr>
+<tr>
+<td>getBinComputedLinkFlow</td>
+<td>Computes the flow of links</td>
+</tr>
+<tr>
+<td>getBinComputedLinkFrictionFactor</td>
+<td>Computes the link friction factor</td>
+</tr>
+<tr>
+<td>getBinComputedLinkHeadloss</td>
+<td>Computes the headloss of links</td>
+</tr>
+<tr>
+<td>getBinComputedLinkQuality</td>
+<td>Computes the quality of links</td>
+</tr>
+<tr>
+<td>getBinComputedLinkReactionRate</td>
+<td>Computes the reaction rate of links</td>
+</tr>
+<tr>
+<td>getBinComputedLinkSetting</td>
+<td>Computes the setting of links</td>
+</tr>
+<tr>
+<td>getBinComputedLinkStatus</td>
+<td>Computes the status of links</td>
+</tr>
+<tr>
+<td>getBinComputedLinkVelocity</td>
+<td>Computes the velocity of links</td>
+</tr>
+<tr>
+<td>getBinComputedNodeDemand</td>
+<td>Computes the demand of nodes</td>
+</tr>
+<tr>
+<td>getBinComputedNodeHead</td>
+<td>Computes the head of nodes</td>
+</tr>
+<tr>
+<td>getBinComputedNodePressure</td>
+<td>Computes the pressure of nodes</td>
+</tr>
+<tr>
+<td>getBinComputedNodeQuality</td>
+<td>Computes the quality of nodes</td>
+</tr>
+<tr>
+<td>getBinComputedPeakKwatts</td>
+<td>Computes the peak Kwatts</td>
+</tr>
+<tr>
+<td>getBinComputedPumpIndexListLinks</td>
+<td>Retrieves the pump indices</td>
+</tr>
+<tr>
+<td>getBinComputedPumpUtilization</td>
+<td>Computes the pump utilization</td>
+</tr>
+<tr>
+<td>getBinDiameterEachLink</td>
+<td>Retrieves the diameter of each link</td>
+</tr>
+<tr>
+<td>getBinLengthEachLink</td>
+<td>Retrieves the length of each link</td>
+</tr>
+<tr>
+<td>getBinLinkIndex</td>
+<td>Retrieves the indices of all links</td>
+</tr>
+<tr>
+<td>getBinLinkNameID</td>
+<td>Retrieves the ID label(s) of all links</td>
+</tr>
+<tr>
+<td>getBinElevationEachNode</td>
+<td>Retrieves the elevation of each node</td>
+</tr>
+<tr>
+<td>getBinNodeCoordinates</td>
+<td>Retrieves coordinate x, y, and x, y vertices for a node</td>
+</tr>
+<tr>
+<td>getBinNodeIndex</td>
+<td>Retrieves the indices of all nodes</td>
+</tr>
+<tr>
+<td>getBinNodeNameID</td>
+<td>Retrieves the ID label(s) of all nodes</td>
+</tr>
+<tr>
+<td>getBinNumberReportingPeriods</td>
+<td>Retrieves the number of reporting periods</td>
+</tr>
+<tr>
+<td>getBinControlsInfo</td>
+<td>Retrieves the controls info</td>
+</tr>
+<tr>
+<td>getBinCurvesInfo</td>
+<td>Retrieves the curves info</td>
+</tr>
+<tr>
+<td>getBinLinksInfo</td>
+<td>Retrieves the links info</td>
+</tr>
+<tr>
+<td>getBinLimitingPotential</td>
+<td>Retrieves limiting potential</td>
+</tr>
+<tr>
+<td>getBinNodesInfo</td>
+<td>Retrieves the nodes info</td>
+</tr>
+<tr>
+<td>getBinNodeSourceInfo</td>
+<td>Retrieves the sources info</td>
+</tr>
+<tr>
+<td>getBinOptionsInfo</td>
+<td>Retrieves the options info</td>
+</tr>
+<tr>
+<td>getBinPatternsInfo</td>
+<td>Retrieves the patterns info</td>
+</tr>
+<tr>
+<td>getBinRulesControlsInfo</td>
+<td>Retrieves the controls info</td>
+</tr>
+<tr>
+<td>getBinTimesInfo</td>
+<td>Retrieves the times info</td>
+</tr>
+<tr>
+<td>getBinPatternIndex</td>
+<td>Retrieves the indices of all patterns</td>
+</tr>
+<tr>
+<td>getBinSimulationDuration</td>
+<td>Retrieves the value of simulation duration</td>
+</tr>
+<tr>
+<td>getBinSections</td>
+<td>Retrieves some basic sections from inp file</td>
+</tr>
+<tr>
+<td>getBinUnits</td>
+<td>Retrieves the units used to express all flow rates</td>
+</tr>
+<tr>
+<td>setBinFlowUnitsAFD</td>
+<td>Sets flow units to AFD</td>
+</tr>
+<tr>
+<td>setBinFlowUnitsCFS</td>
+<td>Sets flow units to CFS</td>
+</tr>
+<tr>
+<td>setBinFlowUnitsCMD</td>
+<td>Sets flow units to CMD</td>
+</tr>
+<tr>
+<td>setBinFlowUnitsCMH</td>
+<td>Sets flow units to CMH</td>
+</tr>
+<tr>
+<td>setBinFlowUnitsGPM</td>
+<td>Sets flow units to GPM</td>
+</tr>
+<tr>
+<td>setBinFlowUnitsIMGD</td>
+<td>Sets flow units to IMGD</td>
+</tr>
+<tr>
+<td>setBinFlowUnitsLPM</td>
+<td>Sets flow units to LPM</td>
+</tr>
+<tr>
+<td>setBinFlowUnitsLPS</td>
+<td>Sets flow units to LPS</td>
+</tr>
+<tr>
+<td>setBinFlowUnitsMGD</td>
+<td>Sets flow units to MGD</td>
+</tr>
+<tr>
+<td>setBinFlowUnitsMLD</td>
+<td>Sets flow units to MLD</td>
+</tr>
+<tr>
+<td>setBinHeadlossCM</td>
+<td>Sets headloss to C-M</td>
+</tr>
+<tr>
+<td>setBinHeadlossDW</td>
+<td>Sets headloss to D-W</td>
+</tr>
+<tr>
+<td>setBinHeadlossHW</td>
+<td>Sets headloss to H-W</td>
+</tr>
+<tr>
+<td>setBinLinkGlobalBulkReactionCoeff</td>
+<td>Sets the global bulk reaction rate coeff.</td>
+</tr>
+<tr>
+<td>setBinLinkGlobalWallReactionCoeff</td>
+<td>Sets the global wall reaction rate coeff.</td>
+</tr>
+<tr>
+<td>setBinLimitingPotential</td>
+<td>Sets limiting potential</td>
+</tr>
+<tr>
+<td>setBinLinkPipeDiameters</td>
+<td>Sets the values of pipe diameters</td>
+</tr>
+<tr>
+<td>setBinLinkPipeLengths</td>
+<td>Sets the values of pipe lengths</td>
+</tr>
+<tr>
+<td>setBinLinkPipeMinorLoss</td>
+<td>Sets the values of pipe minor losses</td>
+</tr>
+<tr>
+<td>setBinLinkPipeRoughness</td>
+<td>Sets the values of pipe roughness</td>
+</tr>
+<tr>
+<td>setBinLinkPipeStatus</td>
+<td>Sets the values of pipe status</td>
+</tr>
+<tr>
+<td>setBinLinkPipesParameters</td>
+<td>Sets the values of pipe parameters (diameters, lengths, minor losses, roughness, status)</td>
+</tr>
+<tr>
+<td>setBinLinkPumpStatus</td>
+<td>Sets the values of pump status</td>
+</tr>
+<tr>
+<td>setBinLinkReactionCoeff</td>
+<td>Sets the values of bulk and wall reaction coeff.</td>
+</tr>
+<tr>
+<td>setBinLinkValvesParameters</td>
+<td>Sets the values of valve parameters (diameters, types, settings, minor losses)</td>
+</tr>
+<tr>
+<td>setBinNodeJunDemandPatternNameID</td>
+<td>Sets the names of demand pattern IDs for junctions</td>
+</tr>
+<tr>
+<td>setBinNodeInitialQuality</td>
+<td>Sets the values of initial qualities</td>
+</tr>
+<tr>
+<td>setBinNodeJunctionElevation</td>
+<td>Sets the values of elevations for junctions</td>
+</tr>
+<tr>
+<td>setBinNodeJunctionsBaseDemands</td>
+<td>Sets the values of base demands</td>
+</tr>
+<tr>
+<td>setBinNodeJunctionsParameters</td>
+<td>Sets the values of junction parameters (elevations, base demands, demand patterns)</td>
+</tr>
+<tr>
+<td>setBinNodeResDemandPatternNameID</td>
+<td>Sets the names of demand pattern IDs for reservoirs</td>
+</tr>
+<tr>
+<td>setBinNodeReservoirElevation</td>
+<td>Sets the values of elevations for reservoirs</td>
+</tr>
+<tr>
+<td>setBinNodeReservoirParameters</td>
+<td>Sets the values of reservoir parameters (elevations, patterns)</td>
+</tr>
+<tr>
+<td>setBinNodeSourceQuality</td>
+<td>Sets the values of source qualities</td>
+</tr>
+<tr>
+<td>setBinNodeTankDiameter</td>
+<td>Sets the values of tanks diameter</td>
+</tr>
+<tr>
+<td>setBinNodeTankElevation</td>
+<td>Sets the values of tanks elevation</td>
+</tr>
+<tr>
+<td>setBinNodeTankInitialLevel</td>
+<td>Sets the values of tanks initial level</td>
+</tr>
+<tr>
+<td>setBinNodeTankMaximumWaterLevel</td>
+<td>Sets the values of tanks maximum water level</td>
+</tr>
+<tr>
+<td>setBinNodeTankMinimumWaterLevel</td>
+<td>Sets the values of tanks minimum water level</td>
+</tr>
+<tr>
+<td>setBinNodeTankMinimumWaterVolume</td>
+<td>Sets the values of tanks minimum water volume</td>
+</tr>
+<tr>
+<td>setBinNodeTankParameters</td>
+<td>Sets the values of reservoir parameters (elevations, initialLevels, minLevels, maxLevels, diameters, minVolume, mixfraction)</td>
+</tr>
+<tr>
+<td>setBinPattern</td>
+<td>Sets all of the multiplier factors for a specific time pattern</td>
+</tr>
+<tr>
+<td>setBinQualityAge</td>
+<td>Sets the type of water quality analysis to Age</td>
+</tr>
+<tr>
+<td>setBinQualityChem</td>
+<td>Sets the type of water quality analysis to Chem</td>
+</tr>
+<tr>
+<td>setBinQualityNone</td>
+<td>Sets the type of water quality analysis to None</td>
+</tr>
+<tr>
+<td>setBinQualityTrace</td>
+<td>Sets the type of water quality analysis to Trace</td>
+</tr>
+<tr>
+<td>setBinQualType</td>
+<td>Sets the type of water quality analysis to any chem e.g. chlorine</td>
+</tr>
+<tr>
+<td>setBinTimeHydraulicStep</td>
+<td>Sets the hydraulic step</td>
+</tr>
+<tr>
+<td>setBinTimePatternStart</td>
+<td>Sets the pattern start</td>
+</tr>
+<tr>
+<td>setBinTimePatternStep</td>
+<td>Sets the pattern step</td>
+</tr>
+<tr>
+<td>setBinTimeQualityStep</td>
+<td>Sets the quality step</td>
+</tr>
+<tr>
+<td>setBinTimeReportingStart</td>
+<td>Sets the reporting start</td>
+</tr>
+<tr>
+<td>setBinTimeReportingStep</td>
+<td>Sets the reporting step</td>
+</tr>
+<tr>
+<td>setBinTimeSimulationDuration</td>
+<td>Sets the simulation duration</td>
+</tr>
+<tr>
+<td>setBinTimeStatisticsAverage</td>
+<td>Sets the statistic type to Average</td>
+</tr>
+<tr>
+<td>setBinTimeStatisticsMaximum</td>
+<td>Sets the statistic type to Maximum</td>
+</tr>
+<tr>
+<td>setBinTimeStatisticsMinimum</td>
+<td>Sets the statistic type to Minimum</td>
+</tr>
+<tr>
+<td>setBinTimeStatisticsNone</td>
+<td>Sets the statistic type to None</td>
+</tr>
+<tr>
+<td>setBinTimeStatisticsRange</td>
+<td>Sets the statistic type to Range</td>
+</tr>
+</tbody>
+</table>
+<h1 id="list-of-epanet-21-functions-supported">List of EPANET 2.1 Functions Supported</h1>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ENgetpumptype</td>
+<td>Retrieves the type of a pump for specific link index</td>
+</tr>
+<tr>
+<td>ENgetheadcurveindex</td>
+<td>Retrieves index of a head curve for specific link index</td>
+</tr>
+<tr>
+<td>ENsetcurvevalue</td>
+<td>Sets x,y point for a specific point and curve</td>
+</tr>
+<tr>
+<td>ENsetcurve</td>
+<td>Sets x,y values for a specific curve</td>
+</tr>
+<tr>
+<td>ENaddcurve</td>
+<td>Adds a new curve appended to the end of the existing curves</td>
+</tr>
+<tr>
+<td>ENgetcurvevalue</td>
+<td>Retrieves x,y point for a specific point number and curve</td>
+</tr>
+<tr>
+<td>ENgetcurvelen</td>
+<td>Retrieves number of points in a curve</td>
+</tr>
+<tr>
+<td>ENgetcurveid</td>
+<td>Retrieves ID of a curve with specific index</td>
+</tr>
+<tr>
+<td>ENgetcurveindex</td>
+<td>Retrieves index of curve with specific ID</td>
+</tr>
+<tr>
+<td>ENsetcoord</td>
+<td>Sets coordinate x, y for a node</td>
+</tr>
+<tr>
+<td>ENgetcoord</td>
+<td>Retrieves coordinate x, y for a node</td>
+</tr>
+<tr>
+<td>ENgetstatistic</td>
+<td>Retrieves hydraulic simulation statistic</td>
+</tr>
+<tr>
+<td>ENgetnumdemands</td>
+<td>Retrieves the number of demand categories for a node</td>
+</tr>
+<tr>
+<td>ENgetbasedemand</td>
+<td>Retrieves the nodes base demand for a category</td>
+</tr>
+<tr>
+<td>ENgetdemandpattern</td>
+<td>Retrieves the index of a demand pattern for a specific demand category of a node</td>
+</tr>
+<tr>
+<td>ENsetbasedemand</td>
+<td>Sets the nodes base demand for a category</td>
+</tr>
+<tr>
+<td>ENgetaveragepatternvalue</td>
+<td>Retrieves the average value of a pattern</td>
+</tr>
+</tbody>
+</table>
+<h1 id="list-of-other-new-epanet-functions-supported">List of other new EPANET Functions Supported</h1>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ENaddnode</td>
+<td>Adds a new node</td>
+</tr>
+<tr>
+<td>ENaddlink</td>
+<td>Adds a new link</td>
+</tr>
+<tr>
+<td>ENdeletenode</td>
+<td>Deletes a node</td>
+</tr>
+<tr>
+<td>ENdeletelink</td>
+<td>Deletes a link</td>
+</tr>
+<tr>
+<td>ENsetheadcurveindex</td>
+<td>Sets the curve index for a specified pump index</td>
+</tr>
+<tr>
+<td>ENsetdemandpattern</td>
+<td>Sets the index of the demand pattern assigned to a node for a category index.</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="about/" class="btn btn-neutral float-right" title="About">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+        <span style="margin-left: 15px"><a href="about/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="./js/theme.js"></script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 0.16.3
+Build Date UTC : 2017-04-21 21:13:20
+-->
