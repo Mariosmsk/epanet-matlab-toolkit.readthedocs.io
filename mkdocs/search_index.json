@@ -52,12 +52,12 @@
         }, 
         {
             "location": "/examples/", 
-            "text": "Examples\n\n\nTest 1", 
+            "text": "Examples\n\n\n\n\nHydraulic Analysis\n\n\nQuality Analysis", 
             "title": "Examples"
         }, 
         {
             "location": "/examples/#examples", 
-            "text": "Test 1", 
+            "text": "Hydraulic Analysis  Quality Analysis", 
             "title": "Examples"
         }, 
         {
