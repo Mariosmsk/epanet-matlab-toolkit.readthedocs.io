@@ -1,7 +1,7 @@
 site_name: EPANET-MATLAB-Toolkit
 pages:
     - Home: index.md
-    - Examples: examples/examples.md
-    - About: about/about.md
+    - Examples: examples.md
+    - About: about.md
 
 theme: readthedocs
