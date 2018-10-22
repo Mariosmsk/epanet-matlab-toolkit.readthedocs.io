@@ -7,24 +7,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="None">
   
-  <link rel="shortcut icon" href="./img/favicon.ico">
+  <link rel="shortcut icon" href="img/favicon.ico">
   <title>Home - EPANET-MATLAB-Toolkit</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="./css/highlight.css">
+  <link rel="stylesheet" href="css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
   <script>
     // Current page data
     var mkdocs_page_name = "Home";
     var mkdocs_page_input_path = "index.md";
-    var mkdocs_page_url = "/";
+    var mkdocs_page_url = null;
   </script>
   
-  <script src="./js/jquery-2.1.1.min.js"></script>
-  <script src="./js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="./js/highlight.pack.js"></script> 
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
 
@@ -38,7 +39,7 @@
         <a href="." class="icon icon-home"> EPANET-MATLAB-Toolkit</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -73,10 +74,13 @@
     <li class="toctree-l2"><a href="#list-of-matlab-class-functions">List of Matlab Class Functions</a></li>
     
 
+    <li class="toctree-l2"><a href="#list-of-epanet-2012-functions-supported">List of EPANET 2.012 Functions Supported</a></li>
+    
+
     <li class="toctree-l2"><a href="#list-of-epanet-21-functions-supported">List of EPANET 2.1 Functions Supported</a></li>
     
 
-    <li class="toctree-l2"><a href="#list-of-other-new-epanet-functions-supported">List of other new EPANET Functions Supported</a></li>
+    <li class="toctree-l2"><a href="#list-of-epanet-22-functions-supported">List of EPANET 2.2 Functions Supported</a></li>
     
 
     </ul>
@@ -127,7 +131,7 @@
                 <h1 id="epanet-matlab-toolkit">EPANET-MATLAB-Toolkit</h1>
 <p>The <code>EPANET-Matlab Toolkit</code> is an open-source software, originally developed by the <a href="http://www.kios.ucy.ac.cy/">KIOS Research Center for Intelligent Systems and Networks of the University of Cyprus</a> which operates within the Matlab environment, for providing a programming interface for the latest version of <a href="https://github.com/OpenWaterAnalytics/epanet">EPANET</a>, a hydraulic and quality modeling software created by the US EPA, with Matlab, a  high-level technical computing software. The goal of the EPANET Matlab Toolkit is to serve as a common programming framework for research and development in the growing field of smart water networks.</p>
 <p>The <code>EPANET-Matlab Toolkit</code> features easy to use commands/wrappers for viewing, modifying, simulating and plotting results produced by the EPANET libraries.  </p>
-<p>For support, please use the OWA community forum : <a href="http://community.wateranalytics.org/">http://community.wateranalytics.org/</a></p>
+<p>For support, please use the OWA community forum : http://community.wateranalytics.org/</p>
 <h1 id="requirements">Requirements</h1>
 <ul>
 <li><a href="http://www.mathworks.com/">Matlab</a></li>
@@ -220,12 +224,24 @@
 <td>Retrieves curve id</td>
 </tr>
 <tr>
+<td>getCurveType</td>
+<td>Retrieves the curve-type (VOLUME, PUMP, EFFICIENCY, HEADLOSS, GENERAL)</td>
+</tr>
+<tr>
+<td>getCurveTypeIndex</td>
+<td>Retrieves the curve-type index for all curves</td>
+</tr>
+<tr>
 <td>getCurveValue</td>
 <td>Retrieves (x,y) values of specific curve index</td>
 </tr>
 <tr>
 <td>getCurveXY</td>
 <td>Retrieves (x,y) values of all curves</td>
+</tr>
+<tr>
+<td>getDemandModel</td>
+<td>Retrieves the type of demand model in use and its parameters</td>
 </tr>
 <tr>
 <td>getENfunctionsImpemented</td>
@@ -354,6 +370,10 @@
 <tr>
 <td>getLinkSettings</td>
 <td>Retrieves the value of all computed link roughness for pipes or actual speed for pumps or actual setting for valves</td>
+</tr>
+<tr>
+<td>getLinkState</td>
+<td>Retrieves the value of all computed link states</td>
 </tr>
 <tr>
 <td>getLinkStatus</td>
@@ -596,6 +616,18 @@
 <td>Retrieve power exponent for the emmitters (0.5)</td>
 </tr>
 <tr>
+<td>getOptionsFlowChange</td>
+<td>Retrieve flow change</td>
+</tr>
+<tr>
+<td>getOptionsHeadError</td>
+<td>Retrieve the head error</td>
+</tr>
+<tr>
+<td>getOptionsHeadLossFormula</td>
+<td>Retrieve headloss formula code (Hazen-Williams, Darcy-Weisbach or Chezy-Manning)</td>
+</tr>
+<tr>
 <td>getOptionsMaxTrials</td>
 <td>Retrieve maximum number of analysis trials</td>
 </tr>
@@ -720,6 +752,10 @@
 <td>Retrieves the type of time series post-processing</td>
 </tr>
 <tr>
+<td>getUnits</td>
+<td>Retrieves the Units of Measurement</td>
+</tr>
+<tr>
 <td>getVersion</td>
 <td>Retrieve the current EPANET version of DLL</td>
 </tr>
@@ -730,6 +766,10 @@
 <tr>
 <td>getLinksInfo</td>
 <td>Retrieves links info e.g. diameters, lengths, roughness coeff. , minor loss coeff. , initial status, initial settings, bulk reaction coeff. , wall reaction coeff. , nodes connecting link indices, type indices</td>
+</tr>
+<tr>
+<td>addControls</td>
+<td>Adds a new simple control</td>
 </tr>
 <tr>
 <td>addCurve</td>
@@ -856,7 +896,7 @@
 <td>Plot the network input file</td>
 </tr>
 <tr>
-<td>setControl</td>
+<td>setControls</td>
 <td>Sets the parameters of a simple control statement</td>
 </tr>
 <tr>
@@ -866,6 +906,50 @@
 <tr>
 <td>setCurveValue</td>
 <td>Retrieves x,y point for a specific point number and curve</td>
+</tr>
+<tr>
+<td>setDemandModel</td>
+<td>Sets the type of demand model to use and its parameters</td>
+</tr>
+<tr>
+<td>setFlowUnitsAFD</td>
+<td>Sets flow units to AFD</td>
+</tr>
+<tr>
+<td>setFlowUnitsCFS</td>
+<td>Sets flow units to CFS</td>
+</tr>
+<tr>
+<td>setFlowUnitsCMD</td>
+<td>Sets flow units to CMD</td>
+</tr>
+<tr>
+<td>setFlowUnitsCMH</td>
+<td>Sets flow units to CMH</td>
+</tr>
+<tr>
+<td>setFlowUnitsGPM</td>
+<td>Sets flow units to GPM</td>
+</tr>
+<tr>
+<td>setFlowUnitsIMGD</td>
+<td>Sets flow units to IMGD</td>
+</tr>
+<tr>
+<td>setFlowUnitsLPM</td>
+<td>Sets flow units to LPM</td>
+</tr>
+<tr>
+<td>setFlowUnitsLPS</td>
+<td>Sets flow units to LPS</td>
+</tr>
+<tr>
+<td>setFlowUnitsMGD</td>
+<td>Sets flow units to MGD</td>
+</tr>
+<tr>
+<td>setFlowUnitsMLD</td>
+<td>Sets flow units to MLD</td>
 </tr>
 <tr>
 <td>setLinkBulkReactionCoeff</td>
@@ -896,6 +980,10 @@
 <td>Sets the values of minor loss coeff.</td>
 </tr>
 <tr>
+<td>setLinkNameID</td>
+<td>Sets the ID name for links</td>
+</tr>
+<tr>
 <td>setLinkRoughnessCoeff</td>
 <td>Sets the values of roughness coeff.</td>
 </tr>
@@ -906,6 +994,42 @@
 <tr>
 <td>setLinkStatus</td>
 <td>Sets the values of status</td>
+</tr>
+<tr>
+<td>setLinkTypePipe</td>
+<td>Set the link type pipe for a specified link</td>
+</tr>
+<tr>
+<td>setLinkTypePipeCV</td>
+<td>Set the link type cvpipe for a specified link</td>
+</tr>
+<tr>
+<td>setLinkTypePump</td>
+<td>Set the link type pump for a specified link</td>
+</tr>
+<tr>
+<td>setLinkTypeValveFCV</td>
+<td>Set the link type valve FCV for a specified link</td>
+</tr>
+<tr>
+<td>setLinkTypeValveGPV</td>
+<td>Set the link type valve PCV for a specified link</td>
+</tr>
+<tr>
+<td>setLinkTypeValvePBV</td>
+<td>Set the link type valve PBV for a specified link</td>
+</tr>
+<tr>
+<td>setLinkTypeValvePRV</td>
+<td>Set the link type valve PRV for a specified link</td>
+</tr>
+<tr>
+<td>setLinkTypeValvePSV</td>
+<td>Set the link type valve PSV for a specified link</td>
+</tr>
+<tr>
+<td>setLinkTypeValveTCV</td>
+<td>Set the link type valve TCV for a specified link</td>
 </tr>
 <tr>
 <td>setLinkWallReactionCoeff</td>
@@ -934,6 +1058,10 @@
 <tr>
 <td>setNodeInitialQuality</td>
 <td>Sets the values of initial qualities</td>
+</tr>
+<tr>
+<td>setNodeNameID</td>
+<td>Sets the ID name for nodes</td>
 </tr>
 <tr>
 <td>setNodeSourcePatternIndex</td>
@@ -1989,6 +2117,237 @@
 </tr>
 </tbody>
 </table>
+<h1 id="list-of-epanet-2012-functions-supported">List of EPANET 2.012 Functions Supported</h1>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ENaddpattern</td>
+<td>Adds a new time pattern to the network</td>
+</tr>
+<tr>
+<td>ENclose</td>
+<td>Closes down the Toolkit system (including all files being processed)</td>
+</tr>
+<tr>
+<td>ENcloseH</td>
+<td>Closes the hydraulic analysis system, freeing all allocated memory</td>
+</tr>
+<tr>
+<td>ENcloseQ</td>
+<td>Closes the water quality analysis system, freeing all allocated memory</td>
+</tr>
+<tr>
+<td>ENepanet</td>
+<td>Runs a complete EPANET simulation</td>
+</tr>
+<tr>
+<td>ENgetcount</td>
+<td>Retrieves the number of network components of a specified type</td>
+</tr>
+<tr>
+<td>ENgetcontrol</td>
+<td>Retrieves the parameters of a simple control statement</td>
+</tr>
+<tr>
+<td>ENgeterror</td>
+<td>Retrieves the text of the message associated with a particular error or warning code</td>
+</tr>
+<tr>
+<td>ENgetflowunits</td>
+<td>Retrieves a code number indicating the units used to express all flow rates</td>
+</tr>
+<tr>
+<td>ENgetlinkid</td>
+<td>Retrieves the ID label of a link with a specified index</td>
+</tr>
+<tr>
+<td>ENgetlinkindex</td>
+<td>Retrieves the index of a link with a specified ID</td>
+</tr>
+<tr>
+<td>ENgetlinknodes</td>
+<td>Retrieves the indexes of the end nodes of a specified link</td>
+</tr>
+<tr>
+<td>ENgetlinktype</td>
+<td>Retrieves the link-type code for a specific link</td>
+</tr>
+<tr>
+<td>ENgetlinkvalue</td>
+<td>Retrieves the value of a specific link parameter</td>
+</tr>
+<tr>
+<td>ENgetnodeid</td>
+<td>Retrieves the ID label of a node with a specified index</td>
+</tr>
+<tr>
+<td>ENgetnodeindex</td>
+<td>Retrieves the index of a node with a specified ID</td>
+</tr>
+<tr>
+<td>ENgetnodetype</td>
+<td>Retrieves the node-type code for a specific node</td>
+</tr>
+<tr>
+<td>ENgetnodevalue</td>
+<td>Retrieves the value of a specific link parameter</td>
+</tr>
+<tr>
+<td>ENgetoption</td>
+<td>Retrieves the value of a particular analysis option</td>
+</tr>
+<tr>
+<td>ENgetpatternid</td>
+<td>Retrieves the ID label of a particular time pattern</td>
+</tr>
+<tr>
+<td>ENgetpatternindex</td>
+<td>Retrieves the index of a particular time pattern</td>
+</tr>
+<tr>
+<td>ENgetpatternlen</td>
+<td>Retrieves the number of time periods in a specific time pattern</td>
+</tr>
+<tr>
+<td>ENgetpatternvalue</td>
+<td>Retrieves the multiplier factor for a specific time period in a time pattern</td>
+</tr>
+<tr>
+<td>ENgetqualtype</td>
+<td>Retrieves the type of water quality analysis called for</td>
+</tr>
+<tr>
+<td>ENgettimeparam</td>
+<td>Retrieves the value of a specific analysis time parameter</td>
+</tr>
+<tr>
+<td>ENgetversion</td>
+<td>Retrieves the version number</td>
+</tr>
+<tr>
+<td>ENinitH</td>
+<td>Initializes hydraulic analysis</td>
+</tr>
+<tr>
+<td>ENinitQ</td>
+<td>Initializes water quality analysis</td>
+</tr>
+<tr>
+<td>ENnextH</td>
+<td>Determine time (in seconds) until next hydraulic event</td>
+</tr>
+<tr>
+<td>ENnextQ</td>
+<td>Advances WQ simulation to next hydraulic event</td>
+</tr>
+<tr>
+<td>ENopen</td>
+<td>Opens EPANET input file &amp; reads in network data</td>
+</tr>
+<tr>
+<td>ENopenH</td>
+<td>Sets up data structures for hydraulic analysis</td>
+</tr>
+<tr>
+<td>ENopenQ</td>
+<td>Sets up data structures for WQ analysis</td>
+</tr>
+<tr>
+<td>ENreport</td>
+<td>Writes simulation report to the report file</td>
+</tr>
+<tr>
+<td>ENresetreport</td>
+<td>Resets report options to default values</td>
+</tr>
+<tr>
+<td>ENrunH</td>
+<td>Run a hydraulic solution period</td>
+</tr>
+<tr>
+<td>ENrunQ</td>
+<td>Retrieves hydraulic &amp; WQ results at time t</td>
+</tr>
+<tr>
+<td>ENsaveH</td>
+<td>Saves hydraulic results to binary file</td>
+</tr>
+<tr>
+<td>ENsavehydfile</td>
+<td>Copies binary hydraulics file to disk</td>
+</tr>
+<tr>
+<td>ENsaveinpfile</td>
+<td>Saves current data to "INP" formatted text file</td>
+</tr>
+<tr>
+<td>ENsetcontrol</td>
+<td>Specify parameters to define a simple control</td>
+</tr>
+<tr>
+<td>ENsetlinkvalue</td>
+<td>Set a proprty value for a link</td>
+</tr>
+<tr>
+<td>ENsetnodevalue</td>
+<td>Set a property value for a node</td>
+</tr>
+<tr>
+<td>ENsetoption</td>
+<td>Set a value for an anlysis option</td>
+</tr>
+<tr>
+<td>ENsetpattern</td>
+<td>Set multipliers for a specific pattern</td>
+</tr>
+<tr>
+<td>ENsetpatternvalue</td>
+<td>Set the multiplier for a specific pattern at a specific period</td>
+</tr>
+<tr>
+<td>ENsetqualtype</td>
+<td>Sets the type of water quality analysis called</td>
+</tr>
+<tr>
+<td>ENsetreport</td>
+<td>Processes a reporting format command</td>
+</tr>
+<tr>
+<td>ENsetstatusreport</td>
+<td>Sets the level of hydraulic status reporting</td>
+</tr>
+<tr>
+<td>ENsettimeparam</td>
+<td>Set the value for a time parameter</td>
+</tr>
+<tr>
+<td>ENsolveH</td>
+<td>Solves the network hydraulics for all time periods</td>
+</tr>
+<tr>
+<td>ENsolveQ</td>
+<td>Solves for network water quality in all time periods</td>
+</tr>
+<tr>
+<td>ENstepQ</td>
+<td>Advances WQ simulation by a single WQ time step</td>
+</tr>
+<tr>
+<td>ENusehydfile</td>
+<td>Opens previously saved binary hydraulics file</td>
+</tr>
+<tr>
+<td>ENwriteline</td>
+<td>Writes line of text to the report file</td>
+</tr>
+</tbody>
+</table>
 <h1 id="list-of-epanet-21-functions-supported">List of EPANET 2.1 Functions Supported</h1>
 <table>
 <thead>
@@ -1999,32 +2358,24 @@
 </thead>
 <tbody>
 <tr>
-<td>ENgetpumptype</td>
-<td>Retrieves the type of a pump for specific link index</td>
-</tr>
-<tr>
-<td>ENgetheadcurveindex</td>
-<td>Retrieves index of a head curve for specific link index</td>
-</tr>
-<tr>
-<td>ENsetcurvevalue</td>
-<td>Sets x,y point for a specific point and curve</td>
-</tr>
-<tr>
-<td>ENsetcurve</td>
-<td>Sets x,y values for a specific curve</td>
-</tr>
-<tr>
 <td>ENaddcurve</td>
 <td>Adds a new curve appended to the end of the existing curves</td>
 </tr>
 <tr>
-<td>ENgetcurvevalue</td>
-<td>Retrieves x,y point for a specific point number and curve</td>
+<td>ENgetaveragepatternvalue</td>
+<td>Retrieves the average value of a pattern</td>
 </tr>
 <tr>
-<td>ENgetcurvelen</td>
-<td>Retrieves number of points in a curve</td>
+<td>ENgetbasedemand</td>
+<td>Retrieves the nodes base demand for a category</td>
+</tr>
+<tr>
+<td>ENgetcoord</td>
+<td>Retrieves coordinate x, y for a node</td>
+</tr>
+<tr>
+<td>ENgetcurve</td>
+<td>Retrieves a curve's properties</td>
 </tr>
 <tr>
 <td>ENgetcurveid</td>
@@ -2035,40 +2386,56 @@
 <td>Retrieves index of curve with specific ID</td>
 </tr>
 <tr>
-<td>ENsetcoord</td>
-<td>Sets coordinate x, y for a node</td>
+<td>ENgetcurvelen</td>
+<td>Retrieves number of points in a curve</td>
 </tr>
 <tr>
-<td>ENgetcoord</td>
-<td>Retrieves coordinate x, y for a node</td>
-</tr>
-<tr>
-<td>ENgetstatistic</td>
-<td>Retrieves hydraulic simulation statistic</td>
-</tr>
-<tr>
-<td>ENgetnumdemands</td>
-<td>Retrieves the number of demand categories for a node</td>
-</tr>
-<tr>
-<td>ENgetbasedemand</td>
-<td>Retrieves the nodes base demand for a category</td>
+<td>ENgetcurvevalue</td>
+<td>Retrieves x,y point for a specific point number and curve</td>
 </tr>
 <tr>
 <td>ENgetdemandpattern</td>
 <td>Retrieves the index of a demand pattern for a specific demand category of a node</td>
 </tr>
 <tr>
+<td>ENgetheadcurveindex</td>
+<td>Retrieves index of a head curve for specific link index</td>
+</tr>
+<tr>
+<td>ENgetnumdemands</td>
+<td>Retrieves the number of demand categories for a node</td>
+</tr>
+<tr>
+<td>ENgetpumptype</td>
+<td>Retrieves the type of a pump for specific link index</td>
+</tr>
+<tr>
+<td>ENgetqualinfo</td>
+<td>Retrieves quality analysis information (type, chemical name, units, trace node ID)</td>
+</tr>
+<tr>
+<td>ENgetstatistic</td>
+<td>Retrieves hydraulic simulation statistic</td>
+</tr>
+<tr>
 <td>ENsetbasedemand</td>
 <td>Sets the nodes base demand for a category</td>
 </tr>
 <tr>
-<td>ENgetaveragepatternvalue</td>
-<td>Retrieves the average value of a pattern</td>
+<td>ENsetcoord</td>
+<td>Sets coordinate x, y for a node</td>
+</tr>
+<tr>
+<td>ENsetcurve</td>
+<td>Sets x,y values for a specific curve</td>
+</tr>
+<tr>
+<td>ENsetcurvevalue</td>
+<td>Sets x,y point for a specific point and curve</td>
 </tr>
 </tbody>
 </table>
-<h1 id="list-of-other-new-epanet-functions-supported">List of other new EPANET Functions Supported</h1>
+<h1 id="list-of-epanet-22-functions-supported">List of EPANET 2.2 Functions Supported</h1>
 <table>
 <thead>
 <tr>
@@ -2078,28 +2445,56 @@
 </thead>
 <tbody>
 <tr>
-<td>ENaddnode</td>
-<td>Adds a new node</td>
+<td>ENaddcontrol</td>
+<td>Specify parameters to add a new simple control</td>
 </tr>
 <tr>
 <td>ENaddlink</td>
 <td>Adds a new link</td>
 </tr>
 <tr>
-<td>ENdeletenode</td>
-<td>Deletes a node</td>
+<td>ENaddnode</td>
+<td>Adds a new node</td>
 </tr>
 <tr>
 <td>ENdeletelink</td>
 <td>Deletes a link</td>
 </tr>
 <tr>
+<td>ENdeletenode</td>
+<td>Deletes a node</td>
+</tr>
+<tr>
+<td>ENsetdemandpattern</td>
+<td>Sets the index of the demand pattern assigned to a node for a category index</td>
+</tr>
+<tr>
 <td>ENsetheadcurveindex</td>
 <td>Sets the curve index for a specified pump index</td>
 </tr>
 <tr>
-<td>ENsetdemandpattern</td>
-<td>Sets the index of the demand pattern assigned to a node for a category index.</td>
+<td>ENgetcurvetype</td>
+<td>Retrieves the type of a curve</td>
+</tr>
+<tr>
+<td>ENsetflowunits</td>
+<td>Sets the flow units</td>
+</tr>
+<tr>
+<td>ENgetdemandmodel</td>
+<td>Retrieves the type of demand model in use and its parameters</td>
+</tr>
+<tr>
+<td>ENsetdemandmodel</td>
+<td>Sets the type of demand model to use and its parameters</td>
+</tr>
+<tr>
+<td>ENsetnodeid</td>
+<td>Change the ID name for a node</td>
+</tr>
+<tr>
+<td>ENsetlinkid</td>
+<td>Change the ID name for a link</td>
 </tr>
 </tbody>
 </table>
@@ -2125,12 +2520,12 @@
 
   Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-	  
+      
         </div>
       </div>
 
     </section>
-    
+
   </div>
 
   <div class="rst-versions" role="note" style="cursor: pointer">
@@ -2142,12 +2537,14 @@
       
     </span>
 </div>
-    <script src="./js/theme.js"></script>
+    <script>var base_url = '.';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
 
 </body>
 </html>
 
 <!--
-MkDocs version : 0.16.3
-Build Date UTC : 2017-04-22 12:29:00
+MkDocs version : 1.0.4
+Build Date UTC : 2018-10-22 13:03:33
 -->
