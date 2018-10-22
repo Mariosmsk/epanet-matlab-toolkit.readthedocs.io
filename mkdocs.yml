@@ -1,5 +1,5 @@
 site_name: EPANET-MATLAB-Toolkit
-pages:
+nav:
     - Home: index.md
     - Examples: examples.md
     - About: about.md
